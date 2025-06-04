@@ -24,6 +24,7 @@
       grid-template-areas: "sidebar main";
       background-color: #f8f9fa;
       gap: 0;
+      overflow: hidden;
       /* Explicitly set gap to 0 to ensure no space */
     }
 
@@ -111,6 +112,7 @@
     .layer-content {
       display: flex;
       align-items: center;
+      justify-content: space-around;
       flex: 1;
       min-width: 0;
     }
@@ -119,7 +121,6 @@
       width: 20px;
       height: 20px;
       margin-right: 8px;
-      background: #ddd;
       border-radius: 3px;
       display: flex;
       align-items: center;
@@ -169,7 +170,6 @@
     .layer-visibility:hover,
     .layer-lock:hover,
     .remove-layer:hover {
-      background: #e0e0e0;
       color: #333;
     }
 
@@ -186,7 +186,7 @@
       height: 16px;
       cursor: grab;
       color: #999;
-      margin-right: 4px;
+      margin-bottom: 4px;
     }
 
     .drag-handle:active {
@@ -923,8 +923,8 @@
         </button>
         <div class="dropdown">
           <select id="font-size" title="Font Size">
-            <option>30px</option>
             <option>20px</option>
+            <option>30px</option>
             <option>40px</option>
             <option>50px</option>
           </select>
@@ -1287,7 +1287,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
-  <script src="script.js"></script>
+  <script src="../static/js/script.js"></script>
 </body>
 
 </html>
