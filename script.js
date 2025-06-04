@@ -173,14 +173,17 @@ document.addEventListener("DOMContentLoaded", function () {
       const icons = {
         textbox: "T",
         text: "T",
-        image: "🖼",
-        rect: "⬜",
-        circle: "⭕",
+        image:
+          '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 17h12l-3.75-5l-3 4L9 13zm-3 4V3h18v18zm2-2h14V5H5zm0 0V5z"/></svg>',
+        rect: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M2 20V4h20v16zm2-2h16V6H4zm0 0V6z"/></svg>',
+        circle:
+          '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8"/></svg>',
         triangle: "🔺",
         line: "📏",
         polygon: "⬟",
-        path: "✏️",
-        group: "📦",
+        path: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4 24q-.825 0-1.412-.587T2 22t.588-1.412T4 20h16q.825 0 1.413.588T22 22t-.587 1.413T20 24zm2-8h1.4l7.8-7.775l-.725-.725l-.7-.7L6 14.6zm-2 1v-2.825q0-.2.075-.387t.225-.338L15.2 2.575q.275-.275.638-.425T16.6 2t.775.15t.675.45L19.425 4q.3.275.437.65t.138.775q0 .375-.138.738t-.437.662L8.55 17.7q-.15.15-.337.225T7.825 18H5q-.425 0-.712-.288T4 17M18 5.4L16.6 4zm-2.8 2.825l-.725-.725l-.7-.7z"/></svg>',
+        group:
+          "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M8 18q-.825 0-1.412-.587T6 16V4q0-.825.588-1.412T8 2h12q.825 0 1.413.588T22 4v12q0 .825-.587 1.413T20 18zm0-2h12V8h-7V4H8zm-4 6q-.825 0-1.412-.587T2 20V6h2v14h14v2zM8 4v12z'/></svg>",
       };
       return icons[type] || "◯";
     },
@@ -229,8 +232,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }" title="Toggle Lock">
           ${
             layer.locked
-              ? "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='#101010' d='M6 22q-.825 0-1.412-.587T4 20V10q0-.825.588-1.412T6 8h1V6q0-2.075 1.463-3.537T12 1t3.538 1.463T17 6v2h1q.825 0 1.413.588T20 10v10q0 .825-.587 1.413T18 22zm6-5q.825 0 1.413-.587T14 15t-.587-1.412T12 13t-1.412.588T10 15t.588 1.413T12 17M9 8h6V6q0-1.25-.875-2.125T12 3t-2.125.875T9 6z'/></svg>"
-              : "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='#101010' d='M6 22q-.825 0-1.412-.587T4 20V10q0-.825.588-1.412T6 8h9V6q0-1.25-.875-2.125T12 3q-1.05 0-1.838.638T9.1 5.225q-.1.35-.413.563T8 6q-.425 0-.712-.275t-.213-.65q.275-1.7 1.662-2.888T12 1q2.075 0 3.538 1.463T17 6v2h1q.825 0 1.413.588T20 10v10q0 .825-.587 1.413T18 22zm6-5q.825 0 1.413-.587T14 15t-.587-1.412T12 13t-1.412.588T10 15t.588 1.413T12 17'/></svg>"
+              ? '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 22q-.825 0-1.412-.587T4 20V10q0-.825.588-1.412T6 8h1V6q0-2.075 1.463-3.537T12 1t3.538 1.463T17 6v2h1q.825 0 1.413.588T20 10v10q0 .825-.587 1.413T18 22zm0-2h12V10H6zm6-3q.825 0 1.413-.587T14 15t-.587-1.412T12 13t-1.412.588T10 15t.588 1.413T12 17M9 8h6V6q0-1.25-.875-2.125T12 3t-2.125.875T9 6zM6 20V10z"/></svg>'
+              : '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 22q-.825 0-1.412-.587T4 20V10q0-.825.588-1.412T6 8h9V6q0-1.25-.875-2.125T12 3q-1.05 0-1.838.638T9.1 5.225q-.1.35-.413.563T8 6q-.425 0-.712-.275t-.213-.65q.35-1.725 1.725-2.9T12 1q2.075 0 3.538 1.462T17 6v2h1q.825 0 1.413.588T20 10v10q0 .825-.587 1.413T18 22zm0-2h12V10H6zm6-3q.825 0 1.413-.587T14 15t-.587-1.412T12 13t-1.412.588T10 15t.588 1.413T12 17m-6 3V10z"/></svg>'
           }
         </button>
         <button class="remove-layer" title="Delete Layer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7 21q-.825 0-1.412-.587T5 19V6q-.425 0-.712-.288T4 5t.288-.712T5 4h4q0-.425.288-.712T10 3h4q.425 0 .713.288T15 4h4q.425 0 .713.288T20 5t-.288.713T19 6v13q0 .825-.587 1.413T17 21zM17 6H7v13h10zm-7 11q.425 0 .713-.288T11 16V9q0-.425-.288-.712T10 8t-.712.288T9 9v7q0 .425.288.713T10 17m4 0q.425 0 .713-.288T15 16V9q0-.425-.288-.712T14 8t-.712.288T13 9v7q0 .425.288.713T14 17M7 6v13z"/></svg></button>
@@ -1798,7 +1801,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("ai-image-results").innerHTML = "";
 
       try {
-        const res = await fetch("http://127.0.0.1:5000/v1/generate_images", {
+        const res = await fetch("v1/generate_images", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ keywords, size, num_images }),
@@ -1823,9 +1826,7 @@ document.addEventListener("DOMContentLoaded", function () {
             img.title = "Click to add to canvas";
             img.onclick = function () {
               // Create a proxied URL
-              const proxiedUrl = `http://127.0.0.1:5000/proxy-image?url=${encodeURIComponent(
-                url
-              )}`;
+              const proxiedUrl = `proxy-image?url=${encodeURIComponent(url)}`;
 
               fabric.Image.fromURL(
                 proxiedUrl,
